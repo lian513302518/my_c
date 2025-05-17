@@ -1,7 +1,7 @@
 # 注意规则在满足自己需求情况下，尽量做到精简，不要过度复杂，以免影响性能。
 # 机场订阅
 proxy-providers:
-  1:
+  niubu:
     url: "https://6bsub.zhunchuanpb.com/api/v1/client/subscribe?token=02268dc19d124869f522750a7f174678"
     type: http
     interval: 86400
@@ -11,7 +11,7 @@ proxy-providers:
       interval: 300
     proxy: 直连
 
-  2:
+  hongxing:
     url: "https://hongxingdl.love/hxyunvip?token=b3b27e8485a6f013165a85df208ca029"
     type: http
     interval: 86400
@@ -105,7 +105,7 @@ dns:
 
 # 出站策略
 # 注意锚点必须放在引用的上方，可以集中把锚点全部放yaml的顶部。
-airPortGroups: &airPortGroups {use: [1, 2]}
+airPortGroups: &airPortGroups {use: [niubi, hongxing]}
 pr: &pr {type: select, proxies: [🚀 默认代理,♻️ 香港自动, ♻️ 台湾自动, ♻️ 新加坡自动, ♻️ 日本自动, ♻️ 美国自动, ♻️ 自动选择, 🌐 全部节点, 直连]}
 proxy-groups:
   - {name: 🎯 直连, type: select, proxies: [直连, 🚀 默认代理]}
