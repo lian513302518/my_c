@@ -11,8 +11,8 @@ proxy-providers:
       interval: 300
     proxy: 直连
 
-  hongxing:
-    url: "https://hongxingdl.love/hxyunvip?token=b3b27e8485a6f013165a85df208ca029"
+  [hongxing]:
+    url: "https://[hongxing]dl.love/hxyunvip?token=b3b27e8485a6f013165a85df208ca029"
     type: http
     interval: 86400
     health-check:
@@ -122,13 +122,13 @@ proxy-groups:
   - {name: ✈️ Speedtest, <<: *pr}
   - {name: 💶 PayPal, <<: *pr}
   - {name: 🐟 漏网之鱼, <<: *pr}
-  - {name: 🌐 全部节点,use: hongxing, type: select, include-all: true}
-  - {name: ♻️ 香港自动,use: hongxing, type: url-test, include-all: true, tolerance: 20, interval: 300, filter: "^(?=.*(?i)(港|hk|(?i)hong))((?!测试)(?!异常)(?!建议)(?!流量).)*$"}
-  - {name: ♻️ 新加坡自动,use: hongxing, type: url-test, include-all: true, tolerance: 20, interval: 300, filter: "^(?=.*(?i)(新加坡|SG|(?i)Singapore))((?!测试)(?!异常)(?!建议)(?!流量).)*$"}
-  - {name: ♻️ 台湾自动,use: hongxing, type: url-test, include-all: true, tolerance: 20, interval: 300, filter: "^(?=.*(?i)(台湾|tw|(?i)Taiwan))((?!测试)(?!异常)(?!建议)(?!流量).)*$"}
-  - {name: ♻️ 日本自动,use: hongxing, type: url-test, include-all: true, tolerance: 20, interval: 300, filter: "^(?=.*(?i)(日|JP|(?i)Japan))((?!测试)(?!异常)(?!建议)(?!流量).)*$" }
-  - {name: ♻️ 美国自动,use: hongxing, type: url-test, include-all: true, tolerance: 20, interval: 300, filter: "^(?=.*(?i)(美|US|(?i)States|America))((?!测试)(?!异常)(?!建议)(?!流量).)*$"}
-  - {name: ♻️ 自动选择,use: hongxing, type: url-test, include-all: true, tolerance: 20, interval: 300, filter: "^((?!(直连)).)*$"}
+  - {name: 🌐 全部节点,use: [hongxing], type: select, include-all: true}
+  - {name: ♻️ 香港自动,use: [hongxing], type: url-test, include-all: true, tolerance: 20, interval: 300, filter: "^(?=.*(?i)(港|hk|(?i)hong))((?!测试)(?!异常)(?!建议)(?!流量).)*$"}
+  - {name: ♻️ 新加坡自动,use: [hongxing], type: url-test, include-all: true, tolerance: 20, interval: 300, filter: "^(?=.*(?i)(新加坡|SG|(?i)Singapore))((?!测试)(?!异常)(?!建议)(?!流量).)*$"}
+  - {name: ♻️ 台湾自动,use: [hongxing], type: url-test, include-all: true, tolerance: 20, interval: 300, filter: "^(?=.*(?i)(台湾|tw|(?i)Taiwan))((?!测试)(?!异常)(?!建议)(?!流量).)*$"}
+  - {name: ♻️ 日本自动,use: [hongxing], type: url-test, include-all: true, tolerance: 20, interval: 300, filter: "^(?=.*(?i)(日|JP|(?i)Japan))((?!测试)(?!异常)(?!建议)(?!流量).)*$" }
+  - {name: ♻️ 美国自动,use: [hongxing], type: url-test, include-all: true, tolerance: 20, interval: 300, filter: "^(?=.*(?i)(美|US|(?i)States|America))((?!测试)(?!异常)(?!建议)(?!流量).)*$"}
+  - {name: ♻️ 自动选择,use: [hongxing], type: url-test, include-all: true, tolerance: 20, interval: 300, filter: "^((?!(直连)).)*$"}
 
 
 # 规则匹配
