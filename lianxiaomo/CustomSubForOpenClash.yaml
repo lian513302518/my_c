@@ -101,7 +101,7 @@ proxy-groups:
   - {name: 📹 YouTube, <<: *pr}
   - {name: 🍀 Google, <<: *pr}
   - {name: 🤖 ChatGPT, <<: *pr}
-  - {name: 🤖 perplexity, <<: *pr}
+  - {name: 🤖 Perplexity, <<: *pr}
   - {name: 👨🏿‍💻 GitHub, <<: *pr}
   - {name: 🪟 Microsoft, <<: *pr}
   - {name: 🎵 TikTok, <<: *pr}
@@ -111,6 +111,7 @@ proxy-groups:
   - {name: 💶 PayPal, <<: *pr}
   - {name: 🍎 Apple, type: select, proxies: [直连, 🚀 默认代理]}
   - {name: 🎯 直连, type: select, proxies: [直连, 🚀 默认代理]}
+  - {name: 🌐 全部节点, type: select, include-all: true}
   - {name: 🐟 漏网之鱼, <<: *pr}
   - {name: ♻️ 香港自动, type: url-test, include-all: true, tolerance: 20, interval: 300, filter: "^(?=.*(?i)(港|hk|(?i)hong))((?!测试)(?!异常)(?!建议)(?!流量).)*$"}
   - {name: ♻️ 新加坡自动, type: url-test, include-all: true, tolerance: 20, interval: 300, filter: "^(?=.*(?i)(新加坡|SG|(?i)Singapore))((?!测试)(?!异常)(?!建议)(?!流量).)*$"}
@@ -118,7 +119,7 @@ proxy-groups:
   - {name: ♻️ 日本自动, type: url-test, include-all: true, tolerance: 20, interval: 300, filter: "^(?=.*(?i)(日|JP|(?i)Japan))((?!测试)(?!异常)(?!建议)(?!流量).)*$" }
   - {name: ♻️ 美国自动, type: url-test, include-all: true, tolerance: 20, interval: 300, filter: "^(?=.*(?i)(美|US|(?i)States|America))((?!测试)(?!异常)(?!建议)(?!流量).)*$"}
   - {name: ♻️ 自动选择, type: url-test, include-all: true, tolerance: 20, interval: 300, filter: "^((?!(直连)).)*$"}
-  - {name: 🌐 全部节点, type: select, include-all: true}
+
 
 # 规则匹配
 # 此规则部分没有做防泄露处理，因为弊严重大于利！
@@ -135,7 +136,7 @@ rules:
   - RULE-SET,tiktok_domain,🎵 TikTok
   - RULE-SET,speedtest_domain,✈️ Speedtest
   - RULE-SET,telegram_domain,📲 Telegram
-  - RULE-SET,perplexity_domain,🤖 perplexity
+  - RULE-SET,perplexity_domain,🤖 Perplexity
   - RULE-SET,netflix_domain,🎥 NETFLIX
   - RULE-SET,paypal_domain,💶 PayPal
   - RULE-SET,gfw_domain,🚀 默认代理
