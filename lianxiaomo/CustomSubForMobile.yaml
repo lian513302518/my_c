@@ -126,7 +126,7 @@ proxy-groups:
   - {name: ♻️ 香港自动, type: url-test, include-all: true, tolerance: 20, interval: 300, filter: "^(?=.*(?i)(港|hk|(?i)hong))((?!测试)(?!异常)(?!建议)(?!流量).)*$"}
   - {name: ♻️ 新加坡自动, type: url-test, include-all: true, tolerance: 20, interval: 300, filter: "^(?=.*(?i)(新加坡|SG|(?i)Singapore))((?!测试)(?!异常)(?!建议)(?!流量).)*$"}
   - {name: ♻️ 台湾自动, type: url-test, include-all: true, tolerance: 20, interval: 300, filter: "^(?=.*(?i)(台湾|tw|(?i)Taiwan))((?!测试)(?!异常)(?!建议)(?!流量).)*$"}
-  - {name: ♻️ 日本自动, type: url-test, include-all: true, tolerance: 20, interval: 300, filter: "^(?=.*(?i)(日|JP|(?i)Japan))((?!测试)(?!异常)(?!建议)(?!流量).)*$" }
+  - {name: ♻️ 日本自动, type: url-test, include-all: true, tolerance: 20, interval: 300, filter: "^(?=.*(?i)(日本|JP|(?i)Japan))((?!测试)(?!异常)(?!建议)(?!流量).)*$" }
   - {name: ♻️ 美国自动, type: url-test, include-all: true, tolerance: 20, interval: 300, filter: "^(?=.*(?i)(美|US|(?i)States|America))((?!测试)(?!异常)(?!建议)(?!流量).)*$"}
   - {name: ♻️ 自动选择, type: url-test, include-all: true, tolerance: 20, interval: 300, filter: "^((?!(直连)).)*$"}
 
