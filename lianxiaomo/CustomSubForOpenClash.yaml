@@ -11,16 +11,6 @@ proxy-providers:
       interval: 300
     proxy: 直连
 
-  hongxing:
-    url: "https://hongxingdl.love/hxyunvip?token=b3b27e8485a6f013165a85df208ca029"
-    type: http
-    interval: 86400
-    health-check:
-      enable: true
-      url: https://www.gstatic.com/generate_204
-      interval: 300
-    proxy: 直连
-
 # 节点信息
 proxies:
   - {name: 直连, type: direct}
