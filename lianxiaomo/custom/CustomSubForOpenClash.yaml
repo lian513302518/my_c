@@ -145,7 +145,7 @@ proxy-groups:
 # 规则引擎（rules）
 # ========================
 rules:
-  - IP-CIDR,221.179.155.0/24,国外,no-resolve
+  - IP-CIDR,221.179.155.0/24,国外
   - RULE-SET,TEST / Domain,Test
   - RULE-SET,ChatGPT / Domain,ChatGPT
 #  - RULE-SET,Claude / Domain,Claude
