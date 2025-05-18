@@ -69,7 +69,8 @@ dns:
   enhanced-mode: fake-ip
   fake-ip-range: 198.20.0.1/16
   nameserver:
-    - 223.5.5.5
+    - 221.179.155.161
+    - 221.179.155.177
   fake-ip-filter:
     - +.lan
     - +.local
