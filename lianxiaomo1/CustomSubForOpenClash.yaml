@@ -6,7 +6,7 @@
 
 proxy-providers:
 
-  niubi:
+  牛逼:
     url: "https://6bsub.zhunchuanpb.com/api/v1/client/subscribe?token=02268dc19d124869f522750a7f174678"
     type: http
     interval: 86400
@@ -16,7 +16,7 @@ proxy-providers:
       interval: 300
     proxy: 直连
 
-  hongxing:
+  红杏:
     url: "https://hongxingdl.love/hxyunvip?token=b3b27e8485a6f013165a85df208ca029"
     type: http
     interval: 86400
@@ -25,6 +25,16 @@ proxy-providers:
       url: https://www.gstatic.com/generate_204
       interval: 300
     proxy: 直连
+
+#  龙猫:
+#    url: "https://linka.lmscunb.cc:2087/api/v1/client/subscribe?token=16f9ce7500f7d5f441e63393e357c408"
+#    type: http
+#    interval: 86400
+#    health-check:
+#      enable: true
+#      url: https://www.gstatic.com/generate_204
+#      interval: 300
+#    proxy: 直连
 
 proxies:
   - {name: 直连, type: direct}
@@ -89,7 +99,7 @@ profile:
 # ========================
 default: &default
   type: select
-  proxies: [直连,所有-手动,所有-自动,香港-自动,台湾-自动,日本-自动,新加坡-自动,韩国-自动,美国-自动,其他-自动,拒绝]
+  proxies: [香港-自动,直连,所有-手动,所有-自动,台湾-自动,日本-自动,新加坡-自动,韩国-自动,美国-自动,其他-自动,拒绝]
 
 proxy-groups:
   - {name: ChatGPT, <<: *default}
@@ -139,7 +149,7 @@ rules:
   - RULE-SET,Perplexity / Domain,Perplexity
   - RULE-SET,Github / Domain,GitHub
 #  - RULE-SET,Telegram / Domain,Telegram
-  - RULE-SET,Telegram / IP,Telegram,no-resolve
+#  - RULE-SET,Telegram / IP,Telegram,no-resolve
 #  - RULE-SET,Twitter / Domain,Twitter(X)
 #  - RULE-SET,WhatsApp / Domain,WhatsApp
 #  - RULE-SET,Facebook / Domain,Facebook
