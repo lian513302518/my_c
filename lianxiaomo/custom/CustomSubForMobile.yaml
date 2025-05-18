@@ -143,6 +143,8 @@ proxy-groups:
 # 规则引擎（rules）
 # ========================
 rules:
+  - IP-CIDR,192.168.5.0/24,直连
+  - IP-CIDR,192.168.1.0/24,直连
   - RULE-SET,TEST / Domain,Test
   - RULE-SET,ChatGPT / Domain,ChatGPT
   #  - RULE-SET,Claude / Domain,Claude
