@@ -15,6 +15,7 @@ proxy-providers:
       url: https://www.gstatic.com/generate_204
       interval: 300
     proxy: 直连
+    exclude-filter: "(?i)(过期时间)|(剩余流量)|(TG群)|(官网)|(中转)"
 
 
   红杏:
@@ -198,7 +199,7 @@ rules:
   - RULE-SET,Globe / Domain,国外
   - RULE-SET,Direct / Domain,国内
   - RULE-SET,China / Domain,国内
-  - RULE-SET,China / IP,国内
+  - RULE-SET,China / IP,国内,no-resolve
   - RULE-SET,Private / Domain,国内
   - MATCH,其他
 
