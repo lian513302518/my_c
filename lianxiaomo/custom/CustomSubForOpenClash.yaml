@@ -6,31 +6,8 @@
 
 proxy-providers:
 
-  牛逼:
-    url: "https://6bsub.zhunchuanpb.com/api/v1/client/subscribe?token=02268dc19d124869f522750a7f174678"
-    type: http
-    interval: 86400
-    health-check:
-      enable: true
-      url: https://www.gstatic.com/generate_204
-      interval: 300
-    proxy: 直连
-    exclude-filter: "(?i)(过期时间)|(剩余流量)|(TG群)|(官网)|(中转)"
-
-
-  红杏:
-    url: "https://hongxingdl.love/hxyunvip?token=b3b27e8485a6f013165a85df208ca029"
-    type: http
-    interval: 86400
-    health-check:
-      enable: true
-      url: https://www.gstatic.com/generate_204
-      interval: 300
-    proxy: 直连
-
-
-#  龙猫:
-#    url: "https://linka.lmscunb.cc:2087/api/v1/client/subscribe?token=16f9ce7500f7d5f441e63393e357c408"
+#  牛逼:
+#    url: "https://6bsub.zhunchuanpb.com/api/v1/client/subscribe?token=02268dc19d124869f522750a7f174678"
 #    type: http
 #    interval: 86400
 #    health-check:
@@ -38,6 +15,29 @@ proxy-providers:
 #      url: https://www.gstatic.com/generate_204
 #      interval: 300
 #    proxy: 直连
+#    exclude-filter: "(?i)(过期时间)|(剩余流量)|(TG群)|(官网)|(中转)"
+#
+#
+#  红杏:
+#    url: "https://hongxingdl.love/hxyunvip?token=b3b27e8485a6f013165a85df208ca029"
+#    type: http
+#    interval: 86400
+#    health-check:
+#      enable: true
+#      url: https://www.gstatic.com/generate_204
+#      interval: 300
+#    proxy: 直连
+
+
+  龙猫:
+    url: "https://linka.lmscunb.cc:2087/api/v1/client/subscribe?token=16f9ce7500f7d5f441e63393e357c408"
+    type: http
+    interval: 86400
+    health-check:
+      enable: true
+      url: https://www.gstatic.com/generate_204
+      interval: 300
+    proxy: 直连
 
 #  狗狗:
 #    url: "https://KFd5zMDy.doggygo.top:8443/api/v1/client/c86ccdc6342b25c3b4540ed27e3ef054"
