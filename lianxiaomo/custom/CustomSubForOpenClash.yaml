@@ -78,7 +78,7 @@ dns:
   fake-ip-filter:
     - +.lan
     - +.local
-#    - geosite:cn
+    - geosite:cn
 
 ipv6: false
 
