@@ -198,7 +198,7 @@ rules:
   - RULE-SET,Globe / Domain,国外
   - RULE-SET,Direct / Domain,国内
   - RULE-SET,China / Domain,国内
-  - RULE-SET,China / IP,国内,no-resolve
+  - RULE-SET,China / IP,国内
   - RULE-SET,Private / Domain,国内
   - MATCH,其他
 
