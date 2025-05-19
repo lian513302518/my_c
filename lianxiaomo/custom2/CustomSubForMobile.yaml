@@ -129,11 +129,11 @@ proxy-groups:
   - {name: 🤖 Perplexity, <<: *pr}
   - {name: 👨🏿‍💻 GitHub, <<: *pr}
   - {name: 🪟 Microsoft, <<: *pr}
-  #  - {name: 🎵 TikTok, <<: *pr}
-  #  - {name: 📲 Telegram, <<: *pr}
-  #  - {name: 🎥 NETFLIX, <<: *pr}
+#  - {name: 🎵 TikTok, <<: *pr}
+#  - {name: 📲 Telegram, <<: *pr}
+#  - {name: 🎥 NETFLIX, <<: *pr}
   - {name: ✈️ Speedtest, <<: *pr}
-  #  - {name: 💶 PayPal, <<: *pr}
+#  - {name: 💶 PayPal, <<: *pr}
   - {name: 🐟 漏网之鱼, <<: *pr}
   - {name: ♻️ 香港自动, type: url-test, include-all: true, tolerance: 20, interval: 300, filter: "^(?=.*(?i)(港|hk|(?i)hong))((?!测试)(?!异常)(?!建议)(?!流量).)*$"}
   - {name: ♻️ 新加坡自动, type: url-test, include-all: true, tolerance: 20, interval: 300, filter: "^(?=.*(?i)(新加坡|SG|(?i)Singapore))((?!测试)(?!异常)(?!建议)(?!流量).)*$"}
@@ -155,18 +155,18 @@ rules:
   - RULE-SET,youtube_domain,📹 YouTube
   - RULE-SET,google_domain,🍀 Google
   - RULE-SET,microsoft_domain,🪟 Microsoft
-  #  - RULE-SET,tiktok_domain,🎵 TikTok
+#  - RULE-SET,tiktok_domain,🎵 TikTok
   - RULE-SET,speedtest_domain,✈️ Speedtest
-  #  - RULE-SET,telegram_domain,📲 Telegram
+#  - RULE-SET,telegram_domain,📲 Telegram
   - RULE-SET,perplexity_domain,🤖 Perplexity
-  #  - RULE-SET,netflix_domain,🎥 NETFLIX
-  #  - RULE-SET,paypal_domain,💶 PayPal
+#  - RULE-SET,netflix_domain,🎥 NETFLIX
+#  - RULE-SET,paypal_domain,💶 PayPal
   - RULE-SET,gfw_domain,🚀 默认代理
   - RULE-SET,geolocation-!cn,🚀 默认代理
   - RULE-SET,cn_domain,🎯 直连
   - RULE-SET,google_ip,🍀 Google,no-resolve
-  #  - RULE-SET,netflix_ip,🎥 NETFLIX,no-resolve
-  #  - RULE-SET,telegram_ip,📲 Telegram,no-resolve
+#  - RULE-SET,netflix_ip,🎥 NETFLIX,no-resolve
+#  - RULE-SET,telegram_ip,📲 Telegram,no-resolve
   - RULE-SET,cn_ip,🎯 直连
   - MATCH,🐟 漏网之鱼
 
@@ -182,14 +182,14 @@ rule-providers:
   youtube_domain: { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/youtube.mrs"}
   google_domain: { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/google.mrs"}
   github_domain: { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/github.mrs"}
-  #  telegram_domain: { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/telegram.mrs"}
+#  telegram_domain: { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/telegram.mrs"}
   perplexity_domain: { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/perplexity.mrs"}
-  #  netflix_domain: { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/netflix.mrs"}
-  #  paypal_domain: { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/paypal.mrs"}
+#  netflix_domain: { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/netflix.mrs"}
+#  paypal_domain: { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/paypal.mrs"}
   microsoft_domain: { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/microsoft.mrs"}
   apple_domain: { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/apple-cn.mrs"}
   speedtest_domain: { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/ookla-speedtest.mrs"}
-  #  tiktok_domain: { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/tiktok.mrs"}
+#  tiktok_domain: { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/tiktok.mrs"}
   gfw_domain: { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/gfw.mrs"}
   geolocation-!cn: { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/geolocation-!cn.mrs"}
   cn_domain: { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/cn.mrs"}
