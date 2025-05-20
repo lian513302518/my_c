@@ -122,7 +122,7 @@ proxy-groups:
   - {name: 🎯 直连, type: select, proxies: [直连, 🚀 默认代理]}
   - {name: 🚀 默认代理, type: select, proxies: [♻️ 香港自动,♻️ 台湾自动, ♻️ 新加坡自动, ♻️ 日本自动, ♻️ 美国自动, ♻️ 自动选择,🌐 全部节点, 直连]}
   - {name: 🌐 全部节点, type: select, include-all: true}
-  - {name: 🍎 Apple, type: select, proxies: [直连, 🚀 默认代理]}
+  - {name: 🍎 Apple, type: select, proxies: [🎯 直连, 🚀 默认代理]}
   - {name: 📹 YouTube, <<: *pr}
   - {name: 🍀 Google, <<: *pr}
   - {name: 🤖 ChatGPT, <<: *pr}
