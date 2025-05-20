@@ -120,8 +120,8 @@ dns:
 pr: &pr {type: select, proxies: [🚀 默认代理,♻️ 香港自动, ♻️ 台湾自动, ♻️ 新加坡自动, ♻️ 日本自动, ♻️ 美国自动, ♻️ 自动选择, 🌐 全部节点, 直连]}
 proxy-groups:
   - {name: 🎯 直连, type: select, proxies: [直连, 🚀 默认代理]}
-  - {name: 🤖 ChatGPT, <<: *pr}
-  - {name: 🤖 Perplexity, <<: *pr}
+  - {name: 🤖 ChatGPT,type: select, proxies: [♻️ 台湾自动,🚀 默认代理,♻️ 香港自动, ♻️ 新加坡自动, ♻️ 日本自动, ♻️ 美国自动, ♻️ 自动选择, 🌐 全部节点, 直连]}
+  - {name: 🤖 Perplexity,type: select, proxies: [♻️ 新加坡自动,🚀 默认代理,♻️ 香港自动,♻️ 台湾自动, ♻️ 日本自动, ♻️ 美国自动, ♻️ 自动选择, 🌐 全部节点, 直连]}
   - {name: 🚀 默认代理, type: select, proxies: [♻️ 香港自动,♻️ 台湾自动, ♻️ 新加坡自动, ♻️ 日本自动, ♻️ 美国自动, ♻️ 自动选择,🌐 全部节点, 直连]}
   - {name: 🌐 全部节点, type: select, include-all: true,filter: "^((?!(直连|拒绝|建议)).)*$"}
   - {name: 🍎 Apple, type: select, proxies: [🎯 直连, 🚀 默认代理]}
@@ -167,7 +167,7 @@ rules:
   - RULE-SET,google_ip,🍀 Google,no-resolve
   #  - RULE-SET,netflix_ip,🎥 NETFLIX,no-resolve
   #  - RULE-SET,telegram_ip,📲 Telegram,no-resolve
-  - RULE-SET,cn_ip,🎯 直连
+  - RULE-SET,cn_ip,🎯 直连,no-resolve
   - MATCH,🐟 漏网之鱼
 
 # 规则集
