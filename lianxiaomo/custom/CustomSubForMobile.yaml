@@ -80,7 +80,7 @@ sniffer:
   force-domain:
     - "+.v2ex.com"
   skip-domain:
-    - "+.baidu.com"
+    - "rule-set:private_domain,cn_domain"
 
 # 入站
 tun:

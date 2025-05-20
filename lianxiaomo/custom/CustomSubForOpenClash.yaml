@@ -42,7 +42,6 @@ socks-port: 7891
 redir-port: 7892
 mixed-port: 7893
 tproxy-port: 7894
-
 allow-lan: true
 bind-address: "*"
 ipv6: false
@@ -80,7 +79,7 @@ sniffer:
   force-domain:
     - "+.v2ex.com"
   skip-domain:
-    - "+.baidu.com"
+    - "rule-set:private_domain,cn_domain"
 
 # 入站
 tun:
