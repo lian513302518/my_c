@@ -32,7 +32,7 @@ proxy-providers:
 #    proxy: 直连
 
   KTM:
-    url: "https://ktmcloud.pro/api/v1/client/subscribe?token=ef694ea37564c83f7b553003a97ef0cd"
+    url: "https://ktm.qeayr.cn/api/v1/client/subscribe?token=596a0a12546522bdec072f71f297b184"
     type: http
     interval: 86400
     health-check:
