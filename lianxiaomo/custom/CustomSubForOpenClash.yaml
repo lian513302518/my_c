@@ -1,28 +1,38 @@
 # 注意规则在满足自己需求情况下，尽量做到精简，不要过度复杂，以免影响性能。
 # 机场订阅
 proxy-providers:
-  牛逼:
-    url: "https://6bsub.zhunchuanpb.com/api/v1/client/subscribe?token=02268dc19d124869f522750a7f174678"
-    type: http
-    interval: 86400
-    health-check:
-      enable: true
-      url: https://www.gstatic.com/generate_204
-      interval: 300
-    proxy: 直连
+#  牛逼:
+#    url: "https://6bsub.zhunchuanpb.com/api/v1/client/subscribe?token=02268dc19d124869f522750a7f174678"
+#    type: http
+#    interval: 86400
+#    health-check:
+#      enable: true
+#      url: https://www.gstatic.com/generate_204
+#      interval: 300
+#    proxy: 直连
+#
+#  红杏:
+#    url: "https://hongxingdl.love/hxyunvip?token=b3b27e8485a6f013165a85df208ca029"
+#    type: http
+#    interval: 86400
+#    health-check:
+#      enable: true
+#      url: https://www.gstatic.com/generate_204
+#      interval: 300
+#    proxy: 直连
+#
+#  龙猫:
+#    url: "https://linka.lmscunb.cc:2087/api/v1/client/subscribe?token=16f9ce7500f7d5f441e63393e357c408"
+#    type: http
+#    interval: 86400
+#    health-check:
+#      enable: true
+#      url: https://www.gstatic.com/generate_204
+#      interval: 300
+#    proxy: 直连
 
-  红杏:
-    url: "https://hongxingdl.love/hxyunvip?token=b3b27e8485a6f013165a85df208ca029"
-    type: http
-    interval: 86400
-    health-check:
-      enable: true
-      url: https://www.gstatic.com/generate_204
-      interval: 300
-    proxy: 直连
-
-  龙猫:
-    url: "https://linka.lmscunb.cc:2087/api/v1/client/subscribe?token=16f9ce7500f7d5f441e63393e357c408"
+  KTM:
+    url: "https://ktmcloud.pro/api/v1/client/subscribe?token=ef694ea37564c83f7b553003a97ef0cd"
     type: http
     interval: 86400
     health-check:
