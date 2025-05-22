@@ -115,8 +115,10 @@ dns:
     - "rule-set:private_domain,cn_domain"
     - "+.msftconnecttest.com"
     - "+.msftncsi.com"
-    - 'play.googleapis.com'
     - "time.*.com"
+    - "services.googleapis.cn"
+    - "googleapis.cn"
+    - "xn--ngstr-lra8j.com"
   default-nameserver:
     - 223.5.5.5
   proxy-server-nameserver:
