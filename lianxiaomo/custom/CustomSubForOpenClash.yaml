@@ -105,7 +105,7 @@ tun:
 # DNS模块
 dns:
   enable: true
-  listen: 0.0.0.0:1053
+  listen: 0.0.0.0:7874
   ipv6: false
   respect-rules: true
   enhanced-mode: fake-ip
@@ -120,11 +120,18 @@ dns:
   default-nameserver:
     - 223.5.5.5
   proxy-server-nameserver:
-    - https://223.5.5.5/dns-query
+    - https://dns.google/dns-query
   # namesever尽量用运营商提供的DNS
+  fallback:
+    - https://1.1.1.1/dns-query
+    - https://dns.quad9.net/dns-query
+  fallback-filter:
+    geoip: true
+    ipcidr:
+      - 240.0.0.0/4
   nameserver:
-    - 180.76.76.76
     - 223.5.5.5
+    - 119.29.29.29
 
 # 出站策略
 # 注意锚点必须放在引用的上方，可以集中把锚点全部放yaml的顶部。
@@ -157,10 +164,10 @@ proxy-groups:
 # 规则匹配
 # 此规则部分没有做防泄露处理，因为弊严重大于利！
 rules:
-  - DOMAIN,android.clients.google.com,🍀 Google
-  - DOMAIN,play.googleapis.com,🍀 Google
   - DOMAIN,dl.google.com,🍀 Google
   - DOMAIN-SUFFIX,gvt1.com,🍀 Google
+  - DOMAIN-SUFFIX,gvt2.com,🍀 Google
+  - DOMAIN-SUFFIX,googlezip.net,🍀 Google
   - DOMAIN-SUFFIX,qichiyu.com,🚀 默认代理
   - RULE-SET,private_domain,直连
   - RULE-SET,apple_domain,🍎 Apple
