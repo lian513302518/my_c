@@ -146,12 +146,12 @@ proxy-groups:
   #  - {name: 📲 Telegram, <<: *pr}
   #  - {name: 🎥 NETFLIX, <<: *pr}
   #  - {name: 💶 PayPal, <<: *pr}
-  - {name: ♻️ 香港自动, type: url-test, include-all: true, tolerance: 20, interval: 300, filter: "^(?=.*(?i)(港|hk|(?i)hong))((?!测试)(?!异常)(?!官网)(?!建议)(?!流量)(?!距离)(?!套餐)(?!最新).)*$"}
-  - {name: ♻️ 新加坡自动, type: url-test, include-all: true, tolerance: 20, interval: 300, filter: "^(?=.*(?i)(新加坡|SG|(?i)Singapore))((?!测试)(?!异常)(?!官网)(?!建议)(?!流量)(?!距离)(?!套餐)(?!最新).)*$"}
-  - {name: ♻️ 台湾自动, type: url-test, include-all: true, tolerance: 20, interval: 300, filter: "^(?=.*(?i)(台湾|tw|(?i)Taiwan))((?!测试)(?!异常)(?!官网)(?!建议)(?!流量)(?!距离)(?!套餐)(?!最新).)*$"}
-  - {name: ♻️ 日本自动, type: url-test, include-all: true, tolerance: 20, interval: 300, filter: "^(?=.*(?i)(日本|JP|(?i)Japan))((?!测试)(?!异常)(?!官网)(?!建议)(?!流量)(?!距离)(?!套餐)(?!最新).)*$" }
-  - {name: ♻️ 美国自动, type: url-test, include-all: true, tolerance: 20, interval: 300, filter: "^(?=.*(?i)(美|US|(?i)States|America))((?!测试)(?!异常)(?!官网)(?!建议)(?!流量)(?!距离)(?!套餐)(?!最新).)*$"}
-  - {name: ♻️ 自动选择, type: url-test, include-all: true, tolerance: 20, interval: 300, filter: "^((?!(直连|拒绝|建议|测试|官网|异常|流量|距离|套餐|最新)).)*$"}
+  - {name: ♻️ 香港自动, type: url-test, include-all: true, tolerance: 50, interval: 900, filter: "^(?=.*(?i)(港|hk|(?i)hong))((?!测试)(?!异常)(?!官网)(?!建议)(?!流量)(?!距离)(?!套餐)(?!最新).)*$"}
+  - {name: ♻️ 新加坡自动, type: url-test, include-all: true, tolerance: 50, interval: 900, filter: "^(?=.*(?i)(新加坡|SG|(?i)Singapore))((?!测试)(?!异常)(?!官网)(?!建议)(?!流量)(?!距离)(?!套餐)(?!最新).)*$"}
+  - {name: ♻️ 台湾自动, type: url-test, include-all: true, tolerance: 50, interval: 900, filter: "^(?=.*(?i)(台湾|tw|(?i)Taiwan))((?!测试)(?!异常)(?!官网)(?!建议)(?!流量)(?!距离)(?!套餐)(?!最新).)*$"}
+  - {name: ♻️ 日本自动, type: url-test, include-all: true, tolerance: 50, interval: 900, filter: "^(?=.*(?i)(日本|JP|(?i)Japan))((?!测试)(?!异常)(?!官网)(?!建议)(?!流量)(?!距离)(?!套餐)(?!最新).)*$" }
+  - {name: ♻️ 美国自动, type: url-test, include-all: true, tolerance: 50, interval: 900, filter: "^(?=.*(?i)(美|US|(?i)States|America))((?!测试)(?!异常)(?!官网)(?!建议)(?!流量)(?!距离)(?!套餐)(?!最新).)*$"}
+  - {name: ♻️ 自动选择, type: url-test, include-all: true, tolerance: 50, interval: 900, filter: "^((?!(直连|拒绝|建议|测试|官网|异常|流量|距离|套餐|最新)).)*$"}
 
 
 # 规则匹配
