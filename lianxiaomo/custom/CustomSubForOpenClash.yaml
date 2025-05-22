@@ -113,15 +113,10 @@ dns:
   fake-ip-filter-mode: blacklist
   fake-ip-filter:
     - "rule-set:private_domain,cn_domain"  # 如果你确定支持 rule-set
-    - "+.lan"
-    - "+.local"
     - "+.msftconnecttest.com"
     - "+.msftncsi.com"
     - "+.time.windows.com"
     - "+.time.apple.com"
-    - "+.services.googleapis.cn"
-    - "+.googleapis.cn"
-    - "+.xn--ngstr-lra8j.com"
   default-nameserver:
     - 223.5.5.5
   proxy-server-nameserver:
@@ -162,6 +157,10 @@ proxy-groups:
 # 规则匹配
 # 此规则部分没有做防泄露处理，因为弊严重大于利！
 rules:
+  - DOMAIN,android.clients.google.com,🍀 Google
+  - DOMAIN,play.googleapis.com,🍀 Google
+  - DOMAIN,dl.google.com,🍀 Google
+  - DOMAIN-SUFFIX,gvt1.com,🍀 Google
   - DOMAIN-SUFFIX,qichiyu.com,🚀 默认代理
   - RULE-SET,private_domain,直连
   - RULE-SET,apple_domain,🍎 Apple
