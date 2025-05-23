@@ -125,6 +125,8 @@ proxy-groups:
 # 此规则部分没有做防泄露处理，因为弊严重大于利！
 rules:
   #解决谷歌商店应用无法下载
+  - DOMAIN-SUFFIX,services.googleapis.cn,直连
+  - DOMAIN-SUFFIX,googleapis.cn,直连
   - DOMAIN-SUFFIX,xn--ngstr-lra8j.com,直连
   - DOMAIN-SUFFIX,qichiyu.com,🚀 默认代理
   - RULE-SET,private_domain,直连
