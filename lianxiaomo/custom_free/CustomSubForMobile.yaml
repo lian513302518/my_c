@@ -105,7 +105,7 @@ proxy-groups:
   - { name: 🤖 ChatGPT,type: select, proxies: [ 🚀 默认代理,   ♻️ 美国自动, ♻️ 自动选择, 🌐 全部节点, 直连 ] }
   - { name: 🤖 Perplexity,type: select, proxies: [ 🚀 默认代理,  ♻️ 美国自动, ♻️ 自动选择, 🌐 全部节点, 直连 ] }
   - { name: 🚀 默认代理, type: select, proxies: [ ♻️ 美国自动, ♻️ 自动选择,🌐 全部节点, 直连 ] }
-  - { name: 🌐 全部节点, type: select, include-all: true,filter: "^((?!(直连|拒绝|建议|测试|官网|异常|流量|距离|套餐|最新)).)*$" }
+  - { name: 🌐 全部节点, type: select, include-all: true,filter: "^((?!(直连|过滤|拒绝|建议|测试|官网|异常|流量|距离|套餐|最新)).)*$" }
   - { name: 🍎 Apple, type: select, proxies: [ 🎯 直连, 🚀 默认代理 ] }
   - { name: 🪟 Microsoft, type: select, proxies: [ 🎯 直连, 🚀 默认代理 ] }
   - { name: 📹 YouTube, <<: *pr }
@@ -117,8 +117,8 @@ proxy-groups:
   #  - {name: 📲 Telegram, <<: *pr}
   #  - {name: 🎥 NETFLIX, <<: *pr}
   #  - {name: 💶 PayPal, <<: *pr}
-  - { name: ♻️ 美国自动, type: url-test, include-all: true, tolerance: 50, interval: 900, filter: "^(?=.*(?i)(美|US|(?i)States|America))((?!测试)(?!异常)(?!官网)(?!建议)(?!流量)(?!距离)(?!套餐)(?!最新).)*$" }
-  - { name: ♻️ 自动选择, type: url-test, include-all: true, tolerance: 50, interval: 900, filter: "^((?!(直连|拒绝|建议|测试|官网|异常|流量|距离|套餐|最新)).)*$" }
+  - { name: ♻️ 美国自动, type: url-test, include-all: true, tolerance: 50, interval: 900, filter: "^(?=.*(?i)(美|US|(?i)States|America))((?!测试)(?!异常)(?!过滤)(?!官网)(?!建议)(?!流量)(?!距离)(?!套餐)(?!最新).)*$" }
+  - { name: ♻️ 自动选择, type: url-test, include-all: true, tolerance: 50, interval: 900, filter: "^((?!(直连|过滤|拒绝|建议|测试|官网|异常|流量|距离|套餐|最新)).)*$" }
 
 
 # 规则匹配
