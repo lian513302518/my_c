@@ -3,7 +3,7 @@
 proxy-providers:
 
   牛逼:
-    url: "https://6bsub.zhunchuanpb.com/api/v1/client/subscribe?token=02268dc19d124869f522750a7f174678"
+    url: "http://8.138.135.231:8090/api/v1/client/subscribe?token=02268dc19d124869f522750a7f174678"
     type: http
     interval: 86400
     health-check:
