@@ -9,7 +9,7 @@ proxy-providers:
     health-check:
       enable: true
       url: https://www.gstatic.com/generate_204
-      interval: 900
+      interval: 300
     proxy: 直连
 
 #  红杏:
@@ -19,7 +19,7 @@ proxy-providers:
 #    health-check:
 #      enable: true
 #      url: https://www.gstatic.com/generate_204
-#      interval: 900
+#      interval: 300
 #    proxy: 直连
 
 #  龙猫:
@@ -29,7 +29,7 @@ proxy-providers:
 #    health-check:
 #      enable: true
 #      url: https://www.gstatic.com/generate_204
-#      interval: 900
+#      interval: 300
 #    proxy: 直连
 
 #  KTM:
@@ -39,7 +39,7 @@ proxy-providers:
 #    health-check:
 #      enable: true
 #      url: https://www.gstatic.com/generate_204
-#      interval: 900
+#      interval: 300
 #    proxy: 直连
 
 # 节点信息
@@ -95,12 +95,13 @@ sniffer:
 # 入站
 tun:
   enable: true
-  # system/gvisor/mixed
-  stack: mixed
-  dns-hijack: ["any:53", "tcp://any:53"]
-  auto-route: true
-  auto-redirect: true
-  auto-detect-interface: true
+  stack: gvisor
+  device: utun
+  endpoint-independent-nat: true
+  auto-route: false
+  auto-detect-interface: false
+  auto-redirect: false
+  strict-route: false
 
 
 # DNS模块
@@ -150,32 +151,32 @@ proxy-groups:
   #  - {name: 🎥 NETFLIX, <<: *pr}
   #  - {name: 💶 PayPal, <<: *pr}
 
-  - { name: 🇭🇰🚧 香港-故转, type: fallback, interval: 900, lazy: false, proxies: [ 🇭🇰🫱 香港-手动, 🇭🇰♻️ 香港-自动 ] }
+  - { name: 🇭🇰🚧 香港-故转, type: fallback, interval: 300, lazy: false, proxies: [ 🇭🇰🫱 香港-手动, 🇭🇰♻️ 香港-自动 ] }
   - { name: 🇭🇰🫱 香港-手动, type: select, include-all: true, filter: "^(?=.*(?i)(港|hk|(?i)hong))((?!测试)(?!异常)(?!过滤)(?!官网)(?!建议)(?!流量)(?!距离)(?!套餐)(?!最新).)*$" }
-  - { name: 🇭🇰♻️ 香港-自动, type: url-test, include-all: true, tolerance: 50, interval: 900, filter: "^(?=.*(?i)(港|hk|(?i)hong))((?!测试)(?!异常)(?!过滤)(?!官网)(?!建议)(?!流量)(?!距离)(?!套餐)(?!最新).)*$" }
+  - { name: 🇭🇰♻️ 香港-自动, type: url-test, include-all: true, tolerance: 50, interval: 300, filter: "^(?=.*(?i)(港|hk|(?i)hong))((?!测试)(?!异常)(?!过滤)(?!官网)(?!建议)(?!流量)(?!距离)(?!套餐)(?!最新).)*$" }
 
-  - { name: 🇹🇼🚧 台湾-故转, type: fallback, interval: 900, lazy: false, proxies: [ 🇹🇼🫱 台湾-手动, 🇹🇼♻️ 台湾-自动 ] }
+  - { name: 🇹🇼🚧 台湾-故转, type: fallback, interval: 300, lazy: false, proxies: [ 🇹🇼🫱 台湾-手动, 🇹🇼♻️ 台湾-自动 ] }
   - { name: 🇹🇼🫱 台湾-手动, type: select, include-all: true, filter: "^(?=.*(?i)(台湾|tw|(?i)Taiwan))((?!测试)(?!异常)(?!过滤)(?!官网)(?!建议)(?!流量)(?!距离)(?!套餐)(?!最新).)*$" }
-  - { name: 🇹🇼♻️ 台湾-自动, type: url-test, include-all: true, tolerance: 50, interval: 900, filter: "^(?=.*(?i)(台湾|tw|(?i)Taiwan))((?!测试)(?!异常)(?!过滤)(?!官网)(?!建议)(?!流量)(?!距离)(?!套餐)(?!最新).)*$" }
+  - { name: 🇹🇼♻️ 台湾-自动, type: url-test, include-all: true, tolerance: 50, interval: 300, filter: "^(?=.*(?i)(台湾|tw|(?i)Taiwan))((?!测试)(?!异常)(?!过滤)(?!官网)(?!建议)(?!流量)(?!距离)(?!套餐)(?!最新).)*$" }
 
-  - { name: 🇸🇬🚧 新加坡-故转, type: fallback, interval: 900, lazy: false, proxies: [ 🇸🇬🫱 新加坡-手动, 🇸🇬♻️ 新加坡-自动 ] }
+  - { name: 🇸🇬🚧 新加坡-故转, type: fallback, interval: 300, lazy: false, proxies: [ 🇸🇬🫱 新加坡-手动, 🇸🇬♻️ 新加坡-自动 ] }
   - { name: 🇸🇬🫱 新加坡-手动, type: select, include-all: true, filter: "^(?=.*(?i)(新加坡|SG|(?i)Singapore))((?!测试)(?!异常)(?!过滤)(?!官网)(?!建议)(?!流量)(?!距离)(?!套餐)(?!最新).)*$" }
-  - { name: 🇸🇬♻️ 新加坡-自动, type: url-test, include-all: true, tolerance: 50, interval: 900, filter: "^(?=.*(?i)(新加坡|SG|(?i)Singapore))((?!测试)(?!异常)(?!过滤)(?!官网)(?!建议)(?!流量)(?!距离)(?!套餐)(?!最新).)*$" }
+  - { name: 🇸🇬♻️ 新加坡-自动, type: url-test, include-all: true, tolerance: 50, interval: 300, filter: "^(?=.*(?i)(新加坡|SG|(?i)Singapore))((?!测试)(?!异常)(?!过滤)(?!官网)(?!建议)(?!流量)(?!距离)(?!套餐)(?!最新).)*$" }
 
-  - { name: 🇯🇵🚧 日本-故转, type: fallback, interval: 900, lazy: false, proxies: [ 🇯🇵🫱 日本-手动, 🇯🇵♻️ 日本-自动 ] }
+  - { name: 🇯🇵🚧 日本-故转, type: fallback, interval: 300, lazy: false, proxies: [ 🇯🇵🫱 日本-手动, 🇯🇵♻️ 日本-自动 ] }
   - { name: 🇯🇵🫱 日本-手动, type: select, include-all: true, filter: "^(?=.*(?i)(日本|JP|(?i)Japan))((?!测试)(?!异常)(?!过滤)(?!官网)(?!建议)(?!流量)(?!距离)(?!套餐)(?!最新).)*$" }
-  - { name: 🇯🇵♻️ 日本-自动, type: url-test, include-all: true, tolerance: 50, interval: 900, filter: "^(?=.*(?i)(日本|JP|(?i)Japan))((?!测试)(?!异常)(?!过滤)(?!官网)(?!建议)(?!流量)(?!距离)(?!套餐)(?!最新).)*$" }
+  - { name: 🇯🇵♻️ 日本-自动, type: url-test, include-all: true, tolerance: 50, interval: 300, filter: "^(?=.*(?i)(日本|JP|(?i)Japan))((?!测试)(?!异常)(?!过滤)(?!官网)(?!建议)(?!流量)(?!距离)(?!套餐)(?!最新).)*$" }
 
-  - { name: 🇰🇷🚧 韩国-故转, type: fallback, interval: 900, lazy: false, proxies: [ 🇰🇷🫱 韩国-手动, 🇰🇷♻️ 韩国-自动 ] }
+  - { name: 🇰🇷🚧 韩国-故转, type: fallback, interval: 300, lazy: false, proxies: [ 🇰🇷🫱 韩国-手动, 🇰🇷♻️ 韩国-自动 ] }
   - { name: 🇰🇷🫱 韩国-手动, type: select, include-all: true, filter: "^(?=.*(?i)(韩国|KR|(?i)Korea))((?!测试)(?!异常)(?!过滤)(?!官网)(?!建议)(?!流量)(?!距离)(?!套餐)(?!最新).)*$" }
-  - { name: 🇰🇷♻️ 韩国-自动, type: url-test, include-all: true, tolerance: 50, interval: 900, filter: "^(?=.*(?i)(韩国|KR|(?i)Korea))((?!测试)(?!异常)(?!过滤)(?!官网)(?!建议)(?!流量)(?!距离)(?!套餐)(?!最新).)*$" }
+  - { name: 🇰🇷♻️ 韩国-自动, type: url-test, include-all: true, tolerance: 50, interval: 300, filter: "^(?=.*(?i)(韩国|KR|(?i)Korea))((?!测试)(?!异常)(?!过滤)(?!官网)(?!建议)(?!流量)(?!距离)(?!套餐)(?!最新).)*$" }
 
-  - { name: 🇺🇸🚧 美国-故转, type: fallback, interval: 900, lazy: false, proxies: [ 🇺🇸🫱 美国-手动, 🇺🇸♻️ 美国-自动 ] }
+  - { name: 🇺🇸🚧 美国-故转, type: fallback, interval: 300, lazy: false, proxies: [ 🇺🇸🫱 美国-手动, 🇺🇸♻️ 美国-自动 ] }
   - { name: 🇺🇸🫱 美国-手动, type: select, include-all: true, filter: "^(?=.*(?i)(美|US|(?i)States|America))((?!测试)(?!异常)(?!过滤)(?!官网)(?!建议)(?!流量)(?!距离)(?!套餐)(?!最新).)*$" }
-  - { name: 🇺🇸♻️ 美国-自动, type: url-test, include-all: true, tolerance: 50, interval: 900, filter: "^(?=.*(?i)(美|US|(?i)States|America))((?!测试)(?!异常)(?!过滤)(?!官网)(?!建议)(?!流量)(?!距离)(?!套餐)(?!最新).)*$" }
+  - { name: 🇺🇸♻️ 美国-自动, type: url-test, include-all: true, tolerance: 50, interval: 300, filter: "^(?=.*(?i)(美|US|(?i)States|America))((?!测试)(?!异常)(?!过滤)(?!官网)(?!建议)(?!流量)(?!距离)(?!套餐)(?!最新).)*$" }
 
   - { name: 🌐🫱 所有-手动, type: select, include-all: true,filter: "^((?!(直连|过滤|拒绝|建议|测试|官网|异常|流量|距离|套餐|最新)).)*$" }
-  - { name: 🌐♻️ 所有-自动, type: url-test, include-all: true, tolerance: 50, interval: 900, filter: "^((?!(直连|过滤|拒绝|建议|测试|官网|异常|流量|距离|套餐|最新)).)*$" }
+  - { name: 🌐♻️ 所有-自动, type: url-test, include-all: true, tolerance: 50, interval: 300, filter: "^((?!(直连|过滤|拒绝|建议|测试|官网|异常|流量|距离|套餐|最新)).)*$" }
 
 
 # 规则匹配
