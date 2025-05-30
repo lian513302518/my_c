@@ -140,7 +140,14 @@ dns:
       - 240.0.0.0/4
       - 0.0.0.0/32
     domain:
+      - "+.google.com"
       - "+.githubusercontent.com"
+      - "+.github.com"
+      - "+.gvt1.com"
+      - "+.googleapis.com"
+      - "+.youtube.com"
+      - "+.ytimg.com"
+      - "+.fbcdn.net"
 
 # 出站策略
 # 注意锚点必须放在引用的上方，可以集中把锚点全部放yaml的顶部。
