@@ -2,18 +2,8 @@
 # 机场订阅
 proxy-providers:
 
-  牛逼:
-    url: "http://8.138.135.231:8090/api/v1/client/subscribe?token=02268dc19d124869f522750a7f174678"
-    type: http
-    interval: 86400
-    health-check:
-      enable: true
-      url: https://www.gstatic.com/generate_204
-      interval: 900
-    proxy: 直连
-
-#  红杏:
-#    url: "https://hongxingdl.love/hxyunvip?token=b3b27e8485a6f013165a85df208ca029"
+#  牛逼:
+#    url: "http://8.138.135.231:8090/api/v1/client/subscribe?token=02268dc19d124869f522750a7f174678"
 #    type: http
 #    interval: 86400
 #    health-check:
@@ -21,6 +11,16 @@ proxy-providers:
 #      url: https://www.gstatic.com/generate_204
 #      interval: 900
 #    proxy: 直连
+
+  红杏:
+    url: "https://hongxingdl.love/hxyunvip?token=b3b27e8485a6f013165a85df208ca029"
+    type: http
+    interval: 86400
+    health-check:
+      enable: true
+      url: https://www.gstatic.com/generate_204
+      interval: 900
+    proxy: 直连
 
 #  龙猫:
 #    url: "https://linka.lmscunb.cc:2087/api/v1/client/subscribe?token=16f9ce7500f7d5f441e63393e357c408"
@@ -79,26 +79,28 @@ external-ui-url: "https://github.moeyy.xyz/https://github.com/Zephyruso/zashboar
 # 嗅探
 sniffer:
   enable: true
-  sniffing:
-    - tls
-    - http
-  skip-domain:
-    - Mijia Cloud
-    - "local"
-    - "+.lan"
+  sniff:
+    HTTP:
+      ports: [ 80, 8080-8880 ]
+      override-destination: true
+    TLS:
+      ports: [ 443, 8443 ]
+    QUIC:
+      ports: [ 443, 8443 ]
   force-domain:
-    - "+.v2ray.com"
-    - "+.clash.meta"
+    - "+.v2ex.com"
+  skip-domain:
+    - "rule-set:private_domain,cn_domain"
 
 # 入站
 tun:
   enable: true
-  stack: system
+  # system/gvisor/mixed
+  stack: mixed
+  dns-hijack: ["any:53", "tcp://any:53"]
   auto-route: true
+  auto-redirect: true
   auto-detect-interface: true
-  dns-hijack:
-    - any:53
-  strict-route: false
 
 
 # DNS模块
@@ -138,14 +140,7 @@ dns:
       - 240.0.0.0/4
       - 0.0.0.0/32
     domain:
-      - "+.google.com"
       - "+.githubusercontent.com"
-      - "+.github.com"
-      - "+.gvt1.com"
-      - "+.googleapis.com"
-      - "+.youtube.com"
-      - "+.ytimg.com"
-      - "+.fbcdn.net"
 
 # 出站策略
 # 注意锚点必须放在引用的上方，可以集中把锚点全部放yaml的顶部。
