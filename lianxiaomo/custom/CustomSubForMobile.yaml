@@ -140,8 +140,8 @@ dns:
       - 240.0.0.0/4
       - 0.0.0.0/32
     domain:
-      - "+.githubusercontent.com"
-      - "+.github.com"
+#      - "+.githubusercontent.com"
+#      - "+.github.com"
 
 # 出站策略
 # 注意锚点必须放在引用的上方，可以集中把锚点全部放yaml的顶部。
