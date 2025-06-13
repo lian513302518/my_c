@@ -195,9 +195,9 @@ proxy-groups:
 # 顺序匹配，靠前的优先匹配，匹配到走策略
 rules:
   #解决谷歌商店应用无法下载
-#  - DOMAIN-SUFFIX,services.googleapis.cn,直连
-#  - DOMAIN-SUFFIX,googleapis.cn,直连
-#  - DOMAIN-SUFFIX,xn--ngstr-lra8j.com,直连
+  - DOMAIN-SUFFIX,services.googleapis.cn,直连
+  - DOMAIN-SUFFIX,googleapis.cn,直连
+  - DOMAIN-SUFFIX,xn--ngstr-lra8j.com,直连
 
   - RULE-SET,private_domain,直连
   - RULE-SET,cn_domain,🎯 直连
