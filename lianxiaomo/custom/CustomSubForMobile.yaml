@@ -133,13 +133,13 @@ dns:
     - 1.1.1.1
     - tls://8.8.4.4:853
     - https://1.0.0.1/dns-query
-  fallback-filter:
-    geoip: true
-    geoip-code: CN
-    ipcidr:
-      - 240.0.0.0/4
-      - 0.0.0.0/32
-    domain:
+#  fallback-filter:
+#    geoip: true
+#    geoip-code: CN
+#    ipcidr:
+#      - 240.0.0.0/4
+#      - 0.0.0.0/32
+#    domain:
 #      - "+.githubusercontent.com"
 #      - "+.github.com"
 
