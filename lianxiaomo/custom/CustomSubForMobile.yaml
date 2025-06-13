@@ -154,7 +154,7 @@ proxy-groups:
   - { name: 🍎 Apple, type: select, proxies: [ 🎯 直连, 🚀 默认代理 ] }
   - { name: 🪟 Microsoft, type: select, proxies: [ 🎯 直连, 🚀 默认代理 ] }
   - { name: 📹 YouTube, <<: *pr }
-  - { name: 🍀 Google, <<: *pr }
+#  - { name: 🍀 Google, <<: *pr }
 #  - { name: 👨🏿‍💻 GitHub, <<: *pr }
   - { name: ✈️ Speedtest, <<: *pr }
   - { name: 🎯 直连, type: select, proxies: [ 直连, 🚀 默认代理 ] }
@@ -210,9 +210,9 @@ rules:
   - RULE-SET,speedtest_domain,✈️ Speedtest
 #  - RULE-SET,github_domain,👨🏿‍💻 GitHub
   - RULE-SET,apple_domain,🍎 Apple
-  - RULE-SET,google_domain,🍀 Google
+#  - RULE-SET,google_domain,🍀 Google
   - RULE-SET,microsoft_domain,🪟 Microsoft
-  - RULE-SET,google_ip,🍀 Google,no-resolve
+#  - RULE-SET,google_ip,🍀 Google,no-resolve
   - RULE-SET,gfw_domain,🚀 默认代理
   - RULE-SET,geolocation-!cn,🚀 默认代理
   - MATCH,🐟 漏网之鱼
@@ -230,7 +230,7 @@ rule-providers:
   private_domain: { <<: *domain, url: "https://github.moeyy.xyz/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/private.mrs" }
   ai: { <<: *domain, url: "https://github.moeyy.xyz/https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/category-ai-!cn.mrs" }
   youtube_domain: { <<: *domain, url: "https://github.moeyy.xyz/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/youtube.mrs" }
-  google_domain: { <<: *domain, url: "https://github.moeyy.xyz/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/google.mrs" }
+#  google_domain: { <<: *domain, url: "https://github.moeyy.xyz/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/google.mrs" }
 #  github_domain: { <<: *domain, url: "https://github.moeyy.xyz/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/github.mrs" }
   telegram_domain: { <<: *domain, url: "https://github.moeyy.xyz/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/telegram.mrs" }
   telegram_ip: { <<: *ip, url: "https://github.moeyy.xyz/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/telegram.mrs" }
@@ -242,7 +242,7 @@ rule-providers:
   geolocation-!cn: { <<: *domain, url: "https://github.moeyy.xyz/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/geolocation-!cn.mrs" }
   cn_domain: { <<: *domain, url: "https://github.moeyy.xyz/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/cn.mrs" }
   cn_ip: { <<: *ip, url: "https://github.moeyy.xyz/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/cn.mrs" }
-  google_ip: { <<: *ip, url: "https://github.moeyy.xyz/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/google.mrs" }
+#  google_ip: { <<: *ip, url: "https://github.moeyy.xyz/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/google.mrs" }
 
   #  tiktok_domain: { <<: *domain, url: "https://github.moeyy.xyz/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/tiktok.mrs"}
   #  netflix_domain: { <<: *domain, url: "https://github.moeyy.xyz/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/netflix.mrs"}
