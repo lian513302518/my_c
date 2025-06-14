@@ -211,7 +211,7 @@ rules:
 #  - RULE-SET,github_domain,👨🏿‍💻 GitHub
   - RULE-SET,apple_domain,🍎 Apple
 #  - RULE-SET,google_domain,🍀 Google
-  - RULE-SET,microsoft_domain,🪟 Microsoft
+#  - RULE-SET,microsoft_domain,🪟 Microsoft
 #  - RULE-SET,google_ip,🍀 Google,no-resolve
   - RULE-SET,gfw_domain,🚀 默认代理
   - RULE-SET,geolocation-!cn,🚀 默认代理
@@ -235,7 +235,7 @@ rule-providers:
   telegram_domain: { <<: *domain, url: "https://github.moeyy.xyz/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/telegram.mrs" }
   telegram_ip: { <<: *ip, url: "https://github.moeyy.xyz/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/telegram.mrs" }
 #  perplexity_domain: { <<: *domain, url: "https://github.moeyy.xyz/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/perplexity.mrs" }
-  microsoft_domain: { <<: *domain, url: "https://github.moeyy.xyz/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/microsoft.mrs" }
+#  microsoft_domain: { <<: *domain, url: "https://github.moeyy.xyz/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/microsoft.mrs" }
   apple_domain: { <<: *domain, url: "https://github.moeyy.xyz/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/apple-cn.mrs" }
   speedtest_domain: { <<: *domain, url: "https://github.moeyy.xyz/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/ookla-speedtest.mrs" }
   gfw_domain: { <<: *domain, url: "https://github.moeyy.xyz/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/gfw.mrs" }
