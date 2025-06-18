@@ -1,38 +1,8 @@
 # 机场订阅
 proxy-providers:
 
-#  牛逼:
-#    url: "http://8.138.135.231:8090/api/v1/client/subscribe?token=02268dc19d124869f522750a7f174678"
-#    type: http
-#    interval: 86400
-#    health-check:
-#      enable: true
-#      url: https://www.gstatic.com/generate_204
-#      interval: 900
-#    proxy: 直连
-
-#  红杏:
-#    url: "https://hongxingdl.love/hxyunvip?token=b3b27e8485a6f013165a85df208ca029"
-#    type: http
-#    interval: 86400
-#    health-check:
-#      enable: true
-#      url: https://www.gstatic.com/generate_204
-#      interval: 900
-#    proxy: 直连
-
-#  龙猫:
-#    url: "https://linka.lmscunb.cc:2087/api/v1/client/subscribe?token=16f9ce7500f7d5f441e63393e357c408"
-#    type: http
-#    interval: 86400
-#    health-check:
-#      enable: true
-#      url: https://www.gstatic.com/generate_204
-#      interval: 900
-#    proxy: 直连
-
-  KTM:
-    url: "https://ktmcloud.art/api/v1/client/subscribe?token=596a0a12546522bdec072f71f297b184"
+  牛逼:
+    url: "http://8.138.135.231:8090/api/v1/client/subscribe?token=02268dc19d124869f522750a7f174678"
     type: http
     interval: 86400
     health-check:
@@ -40,6 +10,46 @@ proxy-providers:
       url: https://www.gstatic.com/generate_204
       interval: 900
     proxy: 直连
+
+  #  红杏:
+  #    url: "https://hongxingdl.love/hxyunvip?token=b3b27e8485a6f013165a85df208ca029"
+  #    type: http
+  #    interval: 86400
+  #    health-check:
+  #      enable: true
+  #      url: https://www.gstatic.com/generate_204
+  #      interval: 900
+  #    proxy: 直连
+
+  #  龙猫:
+  #    url: "https://linka.lmscunb.cc:2087/api/v1/client/subscribe?token=16f9ce7500f7d5f441e63393e357c408"
+  #    type: http
+  #    interval: 86400
+  #    health-check:
+  #      enable: true
+  #      url: https://www.gstatic.com/generate_204
+  #      interval: 900
+  #    proxy: 直连
+
+#  KTM:
+#    url: "https://ktmcloud.art/api/v1/client/subscribe?token=596a0a12546522bdec072f71f297b184"
+#    type: http
+#    interval: 86400
+#    health-check:
+#      enable: true
+#      url: https://www.gstatic.com/generate_204
+#      interval: 900
+#    proxy: 直连
+
+#  公益:
+#    url: "https://wanmeiwl1.xyz/gywl/c99dd26e812cb9ad91a720e8e81652f9"
+#    type: http
+#    interval: 86400
+#    health-check:
+#      enable: true
+#      url: https://www.gstatic.com/generate_204
+#      interval: 900
+#    proxy: 直连
 
 # 节点信息
 proxies:
@@ -149,13 +159,13 @@ proxy-groups:
   - { name: 🤖 Gemini,type: select, proxies: [ 🇸🇬🚧 新加坡-故转, 🇸🇬♻️ 新加坡-自动,🇹🇼🚧 台湾-故转,🇹🇼♻️ 台湾-自动,🇭🇰🚧 香港-故转,🇭🇰♻️ 香港-自动,🇯🇵🚧 日本-故转, 🇰🇷🚧 韩国-故转,🇰🇷♻️ 韩国-自动,🇺🇸🚧 美国-故转, 🇺🇸♻️ 美国-自动, 🌐🫱 所有-手动,🌐♻️ 所有-自动, 直连 ] }
   - { name: 🤖 AI,type: select, proxies: [ 🇹🇼🚧 台湾-故转,🇹🇼♻️ 台湾-自动,🇭🇰🚧 香港-故转,🇭🇰♻️ 香港-自动,🇸🇬🚧 新加坡-故转, 🇸🇬♻️ 新加坡-自动,🇯🇵🚧 日本-故转, 🇰🇷🚧 韩国-故转,🇰🇷♻️ 韩国-自动,🇺🇸🚧 美国-故转, 🇺🇸♻️ 美国-自动, 🌐🫱 所有-手动,🌐♻️ 所有-自动, 直连 ] }
 
-#  - { name: 🤖 Perplexity,type: select, proxies: [ 🇸🇬🚧 新加坡-故转, 🇸🇬♻️ 新加坡-自动, 🇭🇰🚧 香港-故转,🇭🇰♻️ 香港-自动,🇹🇼🚧 台湾-故转,🇹🇼♻️ 台湾-自动,🇯🇵🚧 日本-故转, 🇰🇷🚧 韩国-故转,🇰🇷♻️ 韩国-自动,🇺🇸🚧 美国-故转, 🇺🇸♻️ 美国-自动, 🌐🫱 所有-手动,🌐♻️ 所有-自动, 直连 ] }
+  #  - { name: 🤖 Perplexity,type: select, proxies: [ 🇸🇬🚧 新加坡-故转, 🇸🇬♻️ 新加坡-自动, 🇭🇰🚧 香港-故转,🇭🇰♻️ 香港-自动,🇹🇼🚧 台湾-故转,🇹🇼♻️ 台湾-自动,🇯🇵🚧 日本-故转, 🇰🇷🚧 韩国-故转,🇰🇷♻️ 韩国-自动,🇺🇸🚧 美国-故转, 🇺🇸♻️ 美国-自动, 🌐🫱 所有-手动,🌐♻️ 所有-自动, 直连 ] }
   - { name: 📲 Telegram,type: select, proxies: [ 🇭🇰🚧 香港-故转,🇭🇰♻️ 香港-自动 ] }
   - { name: 🍎 Apple, type: select, proxies: [ 🎯 直连, 🚀 默认代理 ] }
-#  - { name: 🪟 Microsoft, type: select, proxies: [ 🎯 直连, 🚀 默认代理 ] }
+  #  - { name: 🪟 Microsoft, type: select, proxies: [ 🎯 直连, 🚀 默认代理 ] }
   - { name: 📹 YouTube, <<: *pr }
-#  - { name: 🍀 Google, <<: *pr }
-#  - { name: 👨🏿‍💻 GitHub, <<: *pr }
+  #  - { name: 🍀 Google, <<: *pr }
+  #  - { name: 👨🏿‍💻 GitHub, <<: *pr }
   - { name: ✈️ Speedtest, <<: *pr }
   - { name: 🎯 直连, type: select, proxies: [ 直连, 🚀 默认代理 ] }
   - { name: 🐟 漏网之鱼, <<: *pr }
@@ -202,18 +212,18 @@ rules:
   - RULE-SET,private_domain,直连
   - RULE-SET,cn_domain,🎯 直连
   - RULE-SET,cn_ip,🎯 直连,no-resolve
-#  - RULE-SET,perplexity_domain,🤖 Perplexity
+  #  - RULE-SET,perplexity_domain,🤖 Perplexity
   - RULE-SET,gemini,🤖 Gemini
   - RULE-SET,ai,🤖 AI
   - RULE-SET,telegram_domain,📲 Telegram
   - RULE-SET,telegram_ip,📲 Telegram,no-resolve
   - RULE-SET,youtube_domain,📹 YouTube
   - RULE-SET,speedtest_domain,✈️ Speedtest
-#  - RULE-SET,github_domain,👨🏿‍💻 GitHub
+  #  - RULE-SET,github_domain,👨🏿‍💻 GitHub
   - RULE-SET,apple_domain,🍎 Apple
-#  - RULE-SET,google_domain,🍀 Google
-#  - RULE-SET,google_ip,🍀 Google,no-resolve
-#  - RULE-SET,microsoft_domain,🪟 Microsoft
+  #  - RULE-SET,google_domain,🍀 Google
+  #  - RULE-SET,google_ip,🍀 Google,no-resolve
+  #  - RULE-SET,microsoft_domain,🪟 Microsoft
   - RULE-SET,gfw_domain,🚀 默认代理
   - RULE-SET,geolocation-!cn,🚀 默认代理
   - MATCH,🐟 漏网之鱼
@@ -232,13 +242,13 @@ rule-providers:
   gemini: { <<: *domain, url: "https://github.moeyy.xyz/https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/google-gemini.mrs" }
   ai: { <<: *domain, url: "https://github.moeyy.xyz/https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/category-ai-!cn.mrs" }
   youtube_domain: { <<: *domain, url: "https://github.moeyy.xyz/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/youtube.mrs" }
-#  google_domain: { <<: *domain, url: "https://github.moeyy.xyz/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/google.mrs" }
-#  google_ip: { <<: *ip, url: "https://github.moeyy.xyz/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/google.mrs" }
-#  github_domain: { <<: *domain, url: "https://github.moeyy.xyz/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/github.mrs" }
+  #  google_domain: { <<: *domain, url: "https://github.moeyy.xyz/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/google.mrs" }
+  #  google_ip: { <<: *ip, url: "https://github.moeyy.xyz/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/google.mrs" }
+  #  github_domain: { <<: *domain, url: "https://github.moeyy.xyz/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/github.mrs" }
   telegram_domain: { <<: *domain, url: "https://github.moeyy.xyz/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/telegram.mrs" }
   telegram_ip: { <<: *ip, url: "https://github.moeyy.xyz/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/telegram.mrs" }
-#  perplexity_domain: { <<: *domain, url: "https://github.moeyy.xyz/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/perplexity.mrs" }
-#  microsoft_domain: { <<: *domain, url: "https://github.moeyy.xyz/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/microsoft.mrs" }
+  #  perplexity_domain: { <<: *domain, url: "https://github.moeyy.xyz/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/perplexity.mrs" }
+  #  microsoft_domain: { <<: *domain, url: "https://github.moeyy.xyz/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/microsoft.mrs" }
   apple_domain: { <<: *domain, url: "https://github.moeyy.xyz/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/apple-cn.mrs" }
   speedtest_domain: { <<: *domain, url: "https://github.moeyy.xyz/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/ookla-speedtest.mrs" }
   gfw_domain: { <<: *domain, url: "https://github.moeyy.xyz/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/gfw.mrs" }
