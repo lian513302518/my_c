@@ -127,11 +127,11 @@ dns:
     - 119.29.29.29    # 腾讯 DNSPod，备选
     - 8.8.8.8         # Google DNS（若可访问）
     - 1.1.1.1         # Cloudflare DNS（速度快，隐私强）
-  fallback:
-    - 8.8.8.8
-    - 1.1.1.1
-    - tls://8.8.4.4:853
-    - https://1.0.0.1/dns-query
+#  fallback:
+#    - 8.8.8.8
+#    - 1.1.1.1
+#    - tls://8.8.4.4:853
+#    - https://1.0.0.1/dns-query
 #  fallback-filter:
 #    geoip: true
 #    geoip-code: CN
