@@ -100,7 +100,6 @@ tun:
   auto-route: true
   auto-redirect: true
   auto-detect-interface: true
-  strict-route: false
 
 
 # DNS模块
@@ -126,13 +125,12 @@ dns:
   nameserver:
     - 223.5.5.5       # 阿里 DNS，主用
     - 119.29.29.29    # 腾讯 DNSPod，备选
-    - 8.8.8.8         # Google DNS（若可访问）
-    - 1.1.1.1         # Cloudflare DNS（速度快，隐私强）
+    - 114.114.114.114  # 114 DNS，常用备选
   fallback:
-    - 8.8.8.8
-    - 1.1.1.1
-    - tls://8.8.4.4:853
-    - https://1.0.0.1/dns-query
+    - https://1.1.1.1/dns-query    # Cloudflare DoH
+    - https://dns.google/dns-query # Google DoH
+    - tls://8.8.8.8:853            # Google DoT
+    - tls://1.1.1.1:853            # Cloudflare DoT
 #  fallback-filter:
 #    geoip: true
 #    geoip-code: CN
