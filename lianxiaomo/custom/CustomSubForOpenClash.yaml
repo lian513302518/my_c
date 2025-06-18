@@ -31,18 +31,8 @@ proxy-providers:
   #      interval: 900
   #    proxy: 直连
 
-#  KTM:
-#    url: "https://ktmcloud.art/api/v1/client/subscribe?token=596a0a12546522bdec072f71f297b184"
-#    type: http
-#    interval: 86400
-#    health-check:
-#      enable: true
-#      url: https://www.gstatic.com/generate_204
-#      interval: 900
-#    proxy: 直连
-
-  公益:
-    url: "https://wanmeiwl1.xyz/gywl/c99dd26e812cb9ad91a720e8e81652f9"
+  KTM:
+    url: "https://ktmcloud.art/api/v1/client/subscribe?token=596a0a12546522bdec072f71f297b184"
     type: http
     interval: 86400
     health-check:
@@ -50,6 +40,16 @@ proxy-providers:
       url: https://www.gstatic.com/generate_204
       interval: 900
     proxy: 直连
+
+#  公益:
+#    url: "https://wanmeiwl1.xyz/gywl/c99dd26e812cb9ad91a720e8e81652f9"
+#    type: http
+#    interval: 86400
+#    health-check:
+#      enable: true
+#      url: https://www.gstatic.com/generate_204
+#      interval: 900
+#    proxy: 直连
 
 # 节点信息
 proxies:
