@@ -209,23 +209,23 @@ rules:
   - DOMAIN-SUFFIX,googleapis.cn,直连
   - DOMAIN-SUFFIX,xn--ngstr-lra8j.com,直连
 
+  - RULE-SET,apple_domain,🍎 Apple
   - RULE-SET,private_domain,直连
-  - RULE-SET,cn_domain,🎯 直连
-  - RULE-SET,cn_ip,🎯 直连,no-resolve
   #  - RULE-SET,perplexity_domain,🤖 Perplexity
   - RULE-SET,gemini,🤖 Gemini
   - RULE-SET,ai,🤖 AI
   - RULE-SET,telegram_domain,📲 Telegram
-  - RULE-SET,telegram_ip,📲 Telegram,no-resolve
   - RULE-SET,youtube_domain,📹 YouTube
   - RULE-SET,speedtest_domain,✈️ Speedtest
   #  - RULE-SET,github_domain,👨🏿‍💻 GitHub
-  - RULE-SET,apple_domain,🍎 Apple
   #  - RULE-SET,google_domain,🍀 Google
   #  - RULE-SET,google_ip,🍀 Google,no-resolve
   #  - RULE-SET,microsoft_domain,🪟 Microsoft
   - RULE-SET,gfw_domain,🚀 默认代理
   - RULE-SET,geolocation-!cn,🚀 默认代理
+  - RULE-SET,cn_domain,🎯 直连
+  - RULE-SET,telegram_ip,📲 Telegram,no-resolve
+  - RULE-SET,cn_ip,🎯 直连,no-resolve
   - MATCH,🐟 漏网之鱼
   #  - RULE-SET,tiktok_domain,🎵 TikTok
   #  - RULE-SET,netflix_domain,🎥 NETFLIX
