@@ -1,15 +1,15 @@
 # 机场订阅
 proxy-providers:
 
-    牛逼:
-      url: "http://8.138.135.231:8090/api/v1/client/subscribe?token=02268dc19d124869f522750a7f174678"
-      type: http
-      interval: 86400
-      health-check:
-        enable: true
-        url: https://www.gstatic.com/generate_204
-        interval: 900
-      proxy: 直连
+#    牛逼:
+#      url: "http://8.138.135.231:8090/api/v1/client/subscribe?token=02268dc19d124869f522750a7f174678"
+#      type: http
+#      interval: 86400
+#      health-check:
+#        enable: true
+#        url: https://www.gstatic.com/generate_204
+#        interval: 900
+#      proxy: 直连
 
   #  红杏:
   #    url: "https://hongxingdl.love/hxyunvip?token=b3b27e8485a6f013165a85df208ca029"
@@ -31,15 +31,15 @@ proxy-providers:
   #      interval: 900
   #    proxy: 直连
 
-#  KTM:
-#    url: "https://ktmcloud.art/api/v1/client/subscribe?token=596a0a12546522bdec072f71f297b184"
-#    type: http
-#    interval: 86400
-#    health-check:
-#      enable: true
-#      url: https://www.gstatic.com/generate_204
-#      interval: 900
-#    proxy: 直连
+  KTM:
+    url: "https://ktmcloud.art/api/v1/client/subscribe?token=596a0a12546522bdec072f71f297b184"
+    type: http
+    interval: 86400
+    health-check:
+      enable: true
+      url: https://www.gstatic.com/generate_204
+      interval: 900
+    proxy: 直连
 
 #  公益:
 #    url: "https://wanmeiwl1.xyz/gywl/c99dd26e812cb9ad91a720e8e81652f9"
