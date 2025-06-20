@@ -204,6 +204,8 @@ proxy-groups:
 # 规则匹配
 # 顺序匹配，靠前的优先匹配，匹配到走策略
 rules:
+  - # 优先明确的 Zlink 域名直连
+  - DOMAIN-SUFFIX,zspace.cn,直连 # <-- 新增：所有 .zspace.cn 后缀的域名都直连
   #解决谷歌商店应用无法下载
   - DOMAIN-SUFFIX,services.googleapis.cn,直连
   - DOMAIN-SUFFIX,googleapis.cn,直连
